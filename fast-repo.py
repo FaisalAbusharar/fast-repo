@@ -27,8 +27,16 @@ readme = Path(f"{args.source}/README.md")
 
 if not readme.exists() or readme.stat().st_size == 0:
     readme.write_text("This repository was setup using Fast-Repo\n")
-subprocess.run([f"git -c \"{args.source}\" init"], shell=True)
-subprocess.run(["git commit -am \"Fast repo Init\""], shell=True)
+
+subprocess.run([f"git -C \"{args.source}\" init"],
+                shell=True, cwd=f"{args.source}")
+
+
+subprocess.run(["git add ."],
+                shell=True, cwd=f"{args.source}")
+
+subprocess.run(["git commit -am \"Fast repo Init\""],
+                shell=True, cwd=f"{args.source}")
 
 
 result = subprocess.run(
