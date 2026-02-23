@@ -26,7 +26,7 @@ def main():
     subprocess.run([f"git -C \"{args.source}\" init"],
                     shell=True, cwd=f"{args.source}",
                     stdout=subprocess.DEVNULL)
-    print("[bold green]Initiated[/bold green]")
+    print("[bold green]Initiated Git[/bold green]")
 
 
 
@@ -44,17 +44,22 @@ def main():
 
 
     result = subprocess.run(
-        ["gh", "repo", "create",
-        args.repo_name, visibility, 
-        f"--source={args.source}", f"--remote={args.remote}",
-            "--push"],
-        check=True,
-        capture_output=True,
-        text=True
-    )
-
+    [
+        "gh", "repo", "create",
+        args.repo_name,
+        visibility,
+        "--source", args.source,
+        "--remote", args.remote,
+        "--push"
+    ],
+    check=True,
+    text=True,
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL,
+    cwd=args.source
+)
     print(result.stdout)
-    print(f"[bold gold]Successfully created repository with source {args.source}[/bold gold]")
+    print(f"[bold red]Successfully created repository with source {args.source}[/bold red]")
 
 if __name__ == "__main__":
     main()
