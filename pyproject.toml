@@ -1,0 +1,14 @@
+[project]
+name = "fast-repo"
+version = "0.1.0"
+description = "CLI tool to create GitHub repos quickly"
+authors = [
+    {name="Faisal Abusharar", email="your_email@example.com"}
+]
+dependencies = [
+    "rich",
+    "typer",
+]
+
+[project.scripts]
+fast-repo = "fast_repo.main:main"

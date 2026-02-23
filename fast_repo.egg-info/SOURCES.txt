@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+fast_repo.egg-info/PKG-INFO
+fast_repo.egg-info/SOURCES.txt
+fast_repo.egg-info/dependency_links.txt
+fast_repo.egg-info/entry_points.txt
+fast_repo.egg-info/requires.txt
+fast_repo.egg-info/top_level.txt
