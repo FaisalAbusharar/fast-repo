@@ -32,7 +32,7 @@ subprocess.run(["git commit -am \"Fast repo Init\""], shell=True)
 
 
 result = subprocess.run(
-    ["gh", "repo", "create", args.repo_name, visbility, "--source" + args.source, "--remote" + args.remote, "--push"],
+    ["gh", "repo", "create", args.repo_name, visbility, "--source=" + args.source, "--remote=" + args.remote, "--push"],
     check=True,
     capture_output=True,
     text=True
