@@ -1,20 +1,26 @@
 # Fast Repo
 
-**Fast Repo** is a lightweight Python package designed to simplify repository operations and accelerate workflow tasks. It provides utilities for managing, interacting with, and automating tasks in Python projects efficiently.
+**Fast Repo** is a lightweight Python package designed to quickly setup a git repository without any extra fluff like setting up remotes or anything.
 
 ## Features
 
 - Fast and easy repository management
 - Lightweight and dependency-free
-- Automate common Python project tasks
 - Designed for developers who want speed and simplicity
 
 ## Installation
 
 Install via PyPI:
 
-```bash
+```zsh
 pip install repoFast
+```
+
+or
+
+```zsh
+wget https://github.com/FaisalAbusharar/fast-repo/releases/download/v0.1.4-RPM/repofast-0.1.4-1.fc43.noarch.rpm
+sudo dnf install ./repofast-0.1.4.1.fc43.noarch.rpm
 ```
 
 ### Dependencies

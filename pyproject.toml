@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "repoFast"
-version = "0.1.4"
+version = "0.1.5"
 description = "CLI tool to create GitHub repos quickly"
 authors = [
     {name="Faisal Abusharar", email="voidycodes@gmail.com"}
