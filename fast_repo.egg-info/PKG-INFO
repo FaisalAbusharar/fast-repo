@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: fast-repo
-Version: 0.1.1
-Summary: CLI tool to create GitHub repos quickly
-Author-email: Faisal Abusharar <voidycodes@gmail.com>
-Requires-Dist: rich
-Requires-Dist: typer
