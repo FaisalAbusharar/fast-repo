@@ -17,6 +17,11 @@ Install via PyPI:
 pip install repoFast
 ```
 
+### Dependencies
+
+gh is needed for this to work, so install gh and setup the authentication properly.
+[gh Setup Guide](https://cli.github.com/manual/gh_auth_setup-git)
+
 ## Usage
 
 In terminal:
