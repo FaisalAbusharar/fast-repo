@@ -3,15 +3,23 @@ import argparse
 import subprocess
 from rich import print
 from pathlib import Path
+import shutil
+import sys
 
 def main():
+
+
+    if not shutil.which("gh"):
+        print("[bold red]Error: gh is not installed.[/bold red]")
+        sys.exit(1)
+
+
     parser = argparse.ArgumentParser(prog="Fast Repo", description="Quickly setup your repositories")
     parser.add_argument("repo_name", type=str)
-    parser.add_argument("--public", '--verbose', action='store_false')
+    parser.add_argument("--private", '--verbose', action='store_true')
     parser.add_argument("--source", default=".")
     parser.add_argument("--remote", default="origin")
     args = parser.parse_args()
-
 
     visibility = "--private" if args.private else "--public"
 
@@ -54,12 +62,11 @@ def main():
     ],
     check=True,
     text=True,
-    stdout=subprocess.DEVNULL,
-    stderr=subprocess.DEVNULL,
-    cwd=args.source
+    capture_output=True
+
 )
     print(result.stdout)
-    print(f"[bold red]Successfully created repository with source {args.source}[/bold red]")
+    print(f"[bold yellow]Successfully created repository with source {args.source}[/bold yellow]")
 
 if __name__ == "__main__":
     main()

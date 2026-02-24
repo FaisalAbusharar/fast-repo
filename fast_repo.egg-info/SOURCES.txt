@@ -1,5 +1,7 @@
 README.md
 pyproject.toml
+fast_repo/__init__.py
+fast_repo/main.py
 fast_repo.egg-info/PKG-INFO
 fast_repo.egg-info/SOURCES.txt
 fast_repo.egg-info/dependency_links.txt
